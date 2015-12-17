@@ -1,8 +1,10 @@
 .idea/
-build/
+dist/
 node_modules/
+tools/typings/tsd
 tmp/
 src/app/config.json
 src/i18n/
-src/app/templates.js
 *.mo
+*.js
+*.js.map
