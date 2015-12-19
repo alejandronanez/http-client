@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.controller('searchCtrl', [
+export default [
     '$scope',
     '$state',
     '$stateParams',
@@ -31,4 +29,4 @@ app.controller('searchCtrl', [
                 }
             });
     }
-]);
+];

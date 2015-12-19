@@ -64,7 +64,9 @@ import homeController from './component/home/home.controller';
 import leaderboardController from './component/leaderboard/leaderboard.controller';
 import layoutController from './component/layout/layout.controller';
 import profileController from './component/profile/profile.controller';
+import searchController from './component/search/search.controller';
 import srlController from './component/srl/srl.controller';
+import subclassController from './component/subclass/subclass.controller';
 
 var app = angular.module(
     'app',
@@ -125,12 +127,13 @@ app.service('leaderboardApi', leaderboardApi);
 app.service('srlApi', srlApi);
 
 // component controllers
-
 app.controller('homeCtrl', homeController);
 app.controller('layoutCtrl', layoutController);
 app.controller('leaderboardCtrl', leaderboardController);
 app.controller('profileCtrl', profileController);
-app.controller('srlCtrl', profileController);
+app.controller('searchCtrl', searchController);
+app.controller('srlCtrl', srlController);
+app.controller('subclassCtrl', subclassController);
 
 app
     .config([

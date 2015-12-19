@@ -1,6 +1,7 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
+import * as moment from 'moment';
 
-app.controller('subclassCtrl', [
+export default [
     '$rootScope',
     '$scope',
     '$stateParams',
@@ -233,4 +234,4 @@ app.controller('subclassCtrl', [
         loadSubclassCharts();
         loadSubclassPerks();
     }
-]);
+];
