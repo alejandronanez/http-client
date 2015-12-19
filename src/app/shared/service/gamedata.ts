@@ -1,5 +1,10 @@
-(function() {
-    var Gamedata = function($q, $http, gettextCatalog, util) {
+export default [
+    '$q',
+    '$http',
+    'gettextCatalog',
+    'util',
+
+    function($q, $http, gettextCatalog, util) {
         var PAGE_SIZE = 100;
 
         this.getPage = function(type, page) {
@@ -25,16 +30,5 @@
                     }, reject)
             });
         };
-    };
-
-    angular.module('app').service('gamedata', [
-        '$q',
-        '$http',
-        'gettextCatalog',
-        'util',
-
-        function ($q, $http, gettextCatalog, util) {
-            return new Gamedata($q, $http, gettextCatalog, util);
-        }
-    ]);
-})();
+    }
+];

@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.service('bungie', [
+export default [
     '$http',
     'gettextCatalog',
     'util',
@@ -61,4 +59,4 @@ app.service('bungie', [
             };
         };
     }
-]);
+];

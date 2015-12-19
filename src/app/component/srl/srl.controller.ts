@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.controller('srlCtrl', [
+export default [
     '$rootScope',
     '$scope',
     '$location',
@@ -113,4 +111,4 @@ app.controller('srlCtrl', [
 
         $scope.load($scope.platform, $scope.map, 0, false);
     }
-]);
+];

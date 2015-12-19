@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-weapon-spline', [
+export default [
     'consts',
     'gettextCatalog',
 
@@ -55,4 +53,4 @@ app.factory('chart-weapon-spline', [
             }
         };
     }
-]);
+];

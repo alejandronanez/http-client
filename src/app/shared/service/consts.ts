@@ -1,6 +1,6 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
 
-app.service('consts', [
+export default [
     'gettextCatalog',
 
     function (gettextCatalog) {
@@ -212,4 +212,4 @@ app.service('consts', [
             }
         };
     }
-]);
+];

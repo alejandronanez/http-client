@@ -1,7 +1,8 @@
-var app = angular.module('app');
+import * as moment from 'moment';
+import 'moment-duration-format';
 
-app.filter('timeTrial', function() {
+export default function() {
     return function(time) {
         return moment.duration(time, "milliseconds").format('m:ss.SSS');
     }
-});
+};

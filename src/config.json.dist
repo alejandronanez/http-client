@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "config": {
+      "api": "http://127.0.0.1:3000"
+    }
+  },
+  "prod": {
+    "config": {
+      "api": "https://api.guardian.gg"
+    }
+  }
+}

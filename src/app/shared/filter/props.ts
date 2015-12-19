@@ -1,4 +1,4 @@
-app.filter('propsFilter', function() {
+export default function() {
     return function(items, props) {
         var out = [];
 
@@ -27,4 +27,4 @@ app.filter('propsFilter', function() {
 
         return out;
     }
-});
+};

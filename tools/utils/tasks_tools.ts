@@ -1,10 +1,11 @@
+import * as slash from 'slash';
 import * as gulp from 'gulp';
 import * as util from 'gulp-util';
 import * as chalk from 'chalk';
 import * as gulpLoadPlugins from 'gulp-load-plugins';
 import {readdirSync, existsSync, lstatSync} from 'fs';
 import {join} from 'path';
-import {TOOLS_DIR} from '../config';
+import {ENV, APP_BASE, APP_DEST, TOOLS_DIR} from '../config';
 
 const TASKS_PATH = join(TOOLS_DIR, 'tasks');
 
@@ -15,6 +16,14 @@ export function loadTasks(): void {
 export function task(taskname: string, option?: string) {
     util.log('Loading task', chalk.yellow(taskname, option));
     return require(join('..', 'tasks', taskname))(gulp, gulpLoadPlugins(), option);
+}
+
+export function transformPath(plugins, env) {
+    return function (filepath) {
+        filepath = ENV === 'prod' ? filepath.replace(`/${APP_DEST}`, '') : filepath;
+        arguments[0] = join(APP_BASE, filepath);
+        return slash(plugins.inject.transform.apply(plugins.inject.transform, arguments));
+    };
 }
 
 // ----------

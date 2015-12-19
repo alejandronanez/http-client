@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.service('util', [
+export default [
     'config',
 
     function (config) {
@@ -42,4 +40,4 @@ app.service('util', [
             };
         };
     }
-]);
+];

@@ -1,6 +1,6 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
 
-app.controller('homeCtrl', [
+export default [
     '$rootScope',
     '$scope',
     '$q',
@@ -63,4 +63,4 @@ app.controller('homeCtrl', [
                 });
             });
     }
-]);
+];

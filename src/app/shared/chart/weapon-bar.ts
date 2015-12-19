@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-weapon-bar', [
+export default [
     'gettextCatalog',
 
     function (gettextCatalog) {
@@ -46,4 +44,4 @@ app.factory('chart-weapon-bar', [
             }
         };
     }
-]);
+];

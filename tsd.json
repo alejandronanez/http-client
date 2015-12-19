@@ -6,7 +6,7 @@
   "bundle": "tools/typings/tsd/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "jasmine/jasmine.d.ts": {
       "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
@@ -18,27 +18,24 @@
       "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
     },
     "jquery/jquery.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "angularjs/angular-mocks.d.ts": {
       "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
     },
     "orchestrator/orchestrator.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "gulp/gulp.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "q/Q.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "node/node.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     },
     "systemjs/systemjs.d.ts": {
-      "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
-    },
-    "gulp-load-plugins/gulp-load-plugins.d.ts": {
       "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
     },
     "run-sequence/run-sequence.d.ts": {
@@ -85,6 +82,27 @@
     },
     "moment/moment-node.d.ts": {
       "commit": "11322524f8db9cdb921427cad84cd22fe2d4f965"
+    },
+    "yargs/yargs.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "chokidar/chokidar.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "browser-sync/browser-sync.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "angularjs/angular-animate.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "angularjs/angular-sanitize.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
+    },
+    "underscore/underscore.d.ts": {
+      "commit": "04b1abdcfe5f82c5761902f6650fdc1f9261e21f"
+    },
+    "highcharts/highcharts.d.ts": {
+      "commit": "40c60850ad6c8175a62d5ab48c4e016ea5b3dffe"
     }
   }
 }

@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-profile-elo', [
+export default [
     'consts',
     'gettextCatalog',
 
@@ -169,4 +167,4 @@ app.factory('chart-profile-elo', [
             series: {}
         };
     }
-]);
+];

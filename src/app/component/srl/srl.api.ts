@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.service('srlApi', [
+export default [
     '$http',
     'util',
 
@@ -31,4 +29,4 @@ app.service('srlApi', [
             };
         };
     }
-]);
+];

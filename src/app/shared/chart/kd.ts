@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-kd', [
+export default [
     'gettextCatalog',
 
     function(gettextCatalog) {
@@ -42,4 +40,4 @@ app.factory('chart-kd', [
             }]
         }
     }
-]);
+];

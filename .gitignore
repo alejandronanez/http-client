@@ -1,9 +1,11 @@
 .idea/
 dist/
+jspm_packages/
 node_modules/
 tools/typings/tsd
 tmp/
-src/app/config.json
+src/config.json.dist
+src/app/config.js
 src/i18n/
 *.mo
 *.js

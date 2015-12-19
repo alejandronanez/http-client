@@ -1,44 +1,57 @@
 {
   "name": "guardian.gg-client",
   "scripts": {
-    "gulp": "gulp",
-    "serve": "lite-server --open src"
-  },
-  "dependencies": {
-    "angular-loading-bar": "^0.8.0",
-    "angular-toastr": "^1.5.0",
-    "angular-tooltips": "^0.1.24",
-    "angular2": "2.0.0-beta.0",
-    "angularjs-datepicker": "^0.2.16",
-    "animate.css": "^3.4.0",
-    "async": "^1.5.0",
-    "bootstrap": "^3.3.6",
-    "chalk": "^1.1.1",
-    "del": "^2.2.0",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.13",
-    "gulp": "^3.9.0",
-    "gulp-angular-templates": "0.0.2",
-    "gulp-less": "^3.0.5",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-shell": "^0.5.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-typescript": "^2.10.0",
-    "gulp-util": "^3.0.7",
-    "reflect-metadata": "0.1.2",
-    "run-sequence": "^1.1.5",
-    "rxjs": "5.0.0-beta.0",
-    "system": "^1.0.4",
-    "systemjs": "^0.19.6",
-    "typescript": "^1.7.5",
-    "ui-select": "^0.13.2",
-    "zone.js": "0.5.10"
+    "test": "karma start",
+    "postinstall": "jspm install"
   },
   "devDependencies": {
-    "concurrently": "^1.0.0",
-    "lite-server": "^1.3.1",
+    "browser-sync": "^2.10.1",
+    "connect-history-api-fallback": "^1.1.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-ng-constant": "^1.1.0",
+    "gulp-shell": "^0.5.1",
+    "jspm": "^0.16.15",
+    "run-sequence": "^1.1.5",
+    "slash": "^1.0.0",
+    "ts-node": "^0.5.4",
     "tslint": "^3.2.0",
-    "typescript": "^1.7.3"
+    "yargs": "^3.31.0"
+  },
+  "jspm": {
+    "configFile": "jspm.config.js",
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.8",
+      "angular-animate": "github:angular/bower-angular-animate@^1.4.8",
+      "angular-filter": "npm:angular-filter@^0.5.8",
+      "angular-gettext": "npm:angular-gettext@^2.1.2",
+      "angular-loading-bar": "npm:angular-loading-bar@^0.8.0",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.8",
+      "angular-toastr": "npm:angular-toastr@^1.6.0",
+      "angular-tooltips": "npm:angular-tooltips@^1.0.6",
+      "angular-ui-router": "npm:angular-ui-router@^0.2.15",
+      "angularjs-datepicker": "npm:angularjs-datepicker@^0.2.16",
+      "angulartics": "npm:angulartics@^0.20.2",
+      "angulartics-google-analytics": "npm:angulartics-google-analytics@^0.1.3",
+      "animate.css": "npm:animate.css@^3.4.0",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "bootstrap-less": "github:distros/bootstrap-less@^3.3.9",
+      "highcharts": "npm:highcharts@^4.2.0",
+      "highcharts-ng": "npm:highcharts-ng@^0.0.11",
+      "jquery": "github:components/jquery@^2.1.4",
+      "moment": "npm:moment@^2.10.6",
+      "moment-duration-format": "npm:moment-duration-format@^1.3.0",
+      "ng-smooth-scroll": "npm:ng-smooth-scroll@^1.7.3",
+      "ngstorage": "npm:ngstorage@^0.3.10",
+      "ui-select": "npm:ui-select@^0.13.2",
+      "underscore": "npm:underscore@^1.8.3"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
   }
 }

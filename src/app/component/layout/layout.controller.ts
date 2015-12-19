@@ -1,6 +1,6 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
 
-app.controller('layoutCtrl', [
+export default [
     '$scope',
     '$location',
     '$state',
@@ -52,4 +52,4 @@ app.controller('layoutCtrl', [
             $state.go('app.search', { name: name });
         };
     }
-]);
+];

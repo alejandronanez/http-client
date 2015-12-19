@@ -1,6 +1,7 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
+import * as moment from 'moment';
 
-app.controller('profileCtrl', [
+export default [
     '$rootScope',
     '$scope',
     '$state',
@@ -11,9 +12,8 @@ app.controller('profileCtrl', [
     'bungie',
     'consts',
     'charts',
-    'auditFactory',
 
-    function ($rootScope, $scope, $state, $stateParams, $location, $localStorage, api, bungie, consts, charts, auditFactory) {
+    function ($rootScope, $scope, $state, $stateParams, $location, $localStorage, api, bungie, consts, charts) {
         if (!$stateParams.mode) {
             $state.go('app.profile', {
                 platform: $stateParams.platform,
@@ -23,7 +23,6 @@ app.controller('profileCtrl', [
             return;
         }
 
-        //var audit = new auditFactory($scope);
         $scope.mode = $stateParams.mode;
         $scope.modes = consts.modes;
         $scope.modeIcons = consts.modeIcons;
@@ -149,8 +148,6 @@ app.controller('profileCtrl', [
                 .then(function(response) {
                     $scope.items = response.data.Response.data.buckets.Equippable;
                     $scope.definitions = response.data.Response.definitions;
-                    //audit.setLoadout($scope.items);
-                    //audit.setDefinitions($scope.definitions);
                     $scope.loading.inventory = false;
                 }, function(err) {
                     $scope.loading.inventory = false;
@@ -165,7 +162,6 @@ app.controller('profileCtrl', [
 
             $scope.characterIndex = index;
             $scope.character = $scope.characters[$scope.characterIndex];
-            //audit.setCharacter($scope.character);
 
             setMode($scope.mode, true);
             $scope.loadInventory();
@@ -397,4 +393,4 @@ app.controller('profileCtrl', [
             $scope.loadHistory($scope.mode, $scope.platform, $scope.membershipId);
         }
     }
-]);
+];

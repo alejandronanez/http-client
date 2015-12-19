@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-popularity', [
+export default [
     'gettextCatalog',
 
     function (gettextCatalog) {
@@ -30,4 +28,4 @@ app.factory('chart-popularity', [
             }]
         }
     }
-]);
+];

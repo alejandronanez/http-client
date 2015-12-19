@@ -1,4 +1,4 @@
-app.service('api',[
+export default [
     '$http',
     '$location',
     'consts',
@@ -119,4 +119,4 @@ app.service('api',[
             };
         };
     }
-]);
+];

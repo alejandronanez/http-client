@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.service('charts', [
+export default [
     '$injector',
 
     function ($injector) {
@@ -14,4 +12,4 @@ app.service('charts', [
             };
         };
     }
-]);
+];

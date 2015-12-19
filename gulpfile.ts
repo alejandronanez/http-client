@@ -1,3 +1,8 @@
+/// <reference path="tools/typings/tsd/tsd.d.ts" />
+/// <reference path="tools/typings/connect-history-api-fallback.d.ts" />
+/// <reference path="tools/typings/gulp-load-plugins.d.ts" />
+/// <reference path="tools/typings/slash.d.ts" />
+
 import * as gulp from 'gulp';
 import * as runSequence from 'run-sequence';
 import {loadTasks, task} from './tools/utils';
@@ -16,6 +21,11 @@ gulp.task('build.dev', done =>
         'build.img.dev',
         'build.js.dev',
         'build.index',
+        done));
+
+gulp.task('build.dev.watch', done =>
+    runSequence('build.dev',
+        'watch.dev',
         done));
 
 gulp.task('postinstall', done =>

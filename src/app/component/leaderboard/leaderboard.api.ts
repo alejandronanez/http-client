@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.service('leaderboardApi', [
+export default [
     '$http',
     'util',
 
@@ -34,4 +32,4 @@ app.service('leaderboardApi', [
             };
         };
     }
-]);
+];

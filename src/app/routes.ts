@@ -1,11 +1,8 @@
-var app = angular.module('app');
-
-app.config([
+export default [
     '$locationProvider',
     '$stateProvider',
-    '$urlRouterProvider',
 
-    function ($locationProvider, $stateProvider, $urlRouterProvider) {
+    function ($locationProvider, $stateProvider) {
         $locationProvider.html5Mode({
             enabled: true,
             requireBase: false
@@ -32,26 +29,26 @@ app.config([
             .state('app.home', {
                 url: '',
                 controller: 'homeCtrl',
-                templateUrl: 'component/home/home.html'
+                templateUrl: 'app/component/home/home.html'
             })
             .state('app.faq', {
                 url: 'faq',
-                templateUrl: 'component/faq/faq.html'
+                templateUrl: 'app/component/faq/faq.html'
             })
             .state('app.search', {
                 url: 'search/{name}',
                 controller: 'searchCtrl',
-                templateUrl: 'component/search/search.html'
+                templateUrl: 'app/component/search/search.html'
             })
             .state('app.subclass', {
                 url: 'subclass/{subclass:[a-z]+}',
                 controller: 'subclassCtrl',
-                templateUrl: 'component/subclass/subclass.html'
+                templateUrl: 'app/component/subclass/subclass.html'
             })
             .state('app.items', {
                 url: 'items',
                 controller: 'itemCtrl',
-                templateUrl: 'component/item/item.html'
+                templateUrl: 'app/component/item/item.html'
             })
             .state('app.profile', {
                 url: 'profile/{platform}/{name}/{mode}',
@@ -59,37 +56,37 @@ app.config([
                     mode: { value: null, squash: true }
                 },
                 controller: 'profileCtrl',
-                templateUrl: 'component/profile/profile.html'
+                templateUrl: 'app/component/profile/profile.html'
             })
             .state('app.srl', {
                 url: 'srl/{platform:[0-9]+}/{map:[0-9-]+}/{page:[0-9]+}',
                 controller: 'srlCtrl',
-                templateUrl: 'component/srl/srl.html'
+                templateUrl: 'app/component/srl/srl.html'
             })
             .state('app.leaderboard-platform-mode-name', {
                 url: 'leaderboard/{platform}/{mode}/{name}',
                 controller: 'leaderboardCtrl',
-                templateUrl: 'component/leaderboard/leaderboard.html'
+                templateUrl: 'app/component/leaderboard/leaderboard.html'
             })
             .state('app.leaderboard-platform-mode', {
                 url: 'leaderboard/{platform}/{mode}',
                 controller: 'leaderboardCtrl',
-                templateUrl: 'component/leaderboard/leaderboard.html'
+                templateUrl: 'app/component/leaderboard/leaderboard.html'
             })
             .state('app.leaderboard-platform', {
                 url: 'leaderboard/{platform}',
                 controller: 'leaderboardCtrl',
-                templateUrl: 'component/leaderboard/leaderboard.html'
+                templateUrl: 'app/component/leaderboard/leaderboard.html'
             })
             .state('app.leaderboard', {
                 url: 'leaderboard',
                 controller: 'leaderboardCtrl',
-                templateUrl: 'component/leaderboard/leaderboard.html'
+                templateUrl: 'app/component/leaderboard/leaderboard.html'
             })
             .state('app.weapon-stats', {
                 url: 'weapon-stats',
                 controller: 'weaponStatsCtrl',
-                templateUrl: 'component/weapon-stats/weapon-stats.html'
+                templateUrl: 'app/component/weapon-stats/weapon-stats.html'
             });
     }
-]);
+];

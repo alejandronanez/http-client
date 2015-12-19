@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('bungieInterceptor', [
+export default [
     '$q',
     '$rootScope',
 
@@ -26,4 +24,4 @@ app.factory('bungieInterceptor', [
             }
         }
     }
-]);
+];

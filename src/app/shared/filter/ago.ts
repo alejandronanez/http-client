@@ -1,7 +1,7 @@
-var app = angular.module('app');
+import * as moment from 'moment';
 
-app.filter('ago', function() {
+export default function() {
     return function(str) {
         return moment(str).fromNow();
     }
-});
+};

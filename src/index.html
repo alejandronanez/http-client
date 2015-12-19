@@ -21,15 +21,11 @@
 
 <body>
 
-<toaster-container></toaster-container>
+<div class="container" ng-include="'app/component/layout/main.html'"></div>
 
-<!-- we include the basic layout so it's cache busted each deploy -->
-<div class="container" ng-include="'component/layout/main.html'"></div>
-
-<!-- vendor:js -->
-<!-- endinject -->
-<!-- app:js -->
-<!-- endinject -->
+<script src="/jspm_packages/system.js"></script>
+<script src="/jspm.config.js"></script>
+<script>System.import('app/app').catch(console.error.bind(console));</script>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -1,6 +1,4 @@
-var app = angular.module('app');
-
-app.factory('chart-subclass-kd', [
+export default [
     'gettextCatalog',
 
     function (gettextCatalog) {
@@ -41,4 +39,4 @@ app.factory('chart-subclass-kd', [
             }
         }
     }
-]);
+];

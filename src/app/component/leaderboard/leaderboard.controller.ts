@@ -1,6 +1,6 @@
-var app = angular.module('app');
+import * as _ from 'underscore';
 
-app.controller('leaderboardCtrl', [
+export default [
     '$rootScope',
     '$scope',
     '$location',
@@ -129,4 +129,4 @@ app.controller('leaderboardCtrl', [
             $scope.load($scope.platform, $scope.mode, 0, false);
         }
     }
-]);
+];
