@@ -2,7 +2,7 @@
   "name": "guardian.gg-client",
   "scripts": {
     "test": "karma start",
-    "postinstall": "jspm install"
+    "postinstall": ["jspm install", "tsd instal"]
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",

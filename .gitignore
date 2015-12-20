@@ -9,4 +9,5 @@ src/app/config.js
 src/i18n/
 *.mo
 *.js
+!jspm.config.js
 *.js.map
