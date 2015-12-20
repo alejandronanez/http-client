@@ -4,11 +4,7 @@
 /// <reference path="tools/typings/slash.d.ts" />
 
 import * as gulp from 'gulp';
-import * as runSequence from 'run-sequence';
-import {loadTasks, task} from './tools/utils';
-
-// loads all tasks from tools/tasks
-loadTasks();
+import {runSequence, task} from './tools/utils';
 
 // (override)
 gulp.task('clean',       task('clean', 'all'));
@@ -17,9 +13,8 @@ gulp.task('clean.dist',  task('clean', 'dist'));
 gulp.task('build.dev', done =>
     runSequence('clean.dist',
         'tslint',
+        'build.config',
         'build.less.dev',
-        'build.img.dev',
-        'build.js.dev',
         'build.index',
         done));
 

@@ -5,7 +5,7 @@ export const DEBUG    = argv['debug'] || false;
 export const PORT     = argv['port'] || 5555;
 export const APP_BASE = argv['base'] || '/';
 
-export const APP_SRC   = './src';
+export const APP_SRC   = 'src';
 export const TOOLS_DIR = 'tools';
 export const ASSET_SRC = `${APP_SRC}/asset`;
 export const APP_DEST  = `dist/${ENV}`;

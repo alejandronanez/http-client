@@ -5,10 +5,13 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "removeComments": true
   },
   "exclude": [
     "node_modules",
-    "jspm_packages"
+    "jspm_packages",
+    "tools",
+    "gulpfile.ts"
   ]
 }
