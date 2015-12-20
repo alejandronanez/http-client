@@ -10,7 +10,7 @@ window.Highcharts = Highcharts;
 import 'bootstrap';
 
 // config
-import './app.config';
+import '../app.config';
 
 // these imports just load the files and are not called in this script
 import 'angulartics';

@@ -13,6 +13,6 @@ export = function buildConfigDev(gulp, plugins) {
             stream: true
         })
             .pipe(plugins.concat('app.config.js'))
-            .pipe(gulp.dest(join(APP_SRC, 'app')));
+            .pipe(gulp.dest(join(APP_DEST)));
     };
 }
