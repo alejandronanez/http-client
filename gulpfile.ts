@@ -6,25 +6,25 @@
 import * as gulp from 'gulp';
 import {runSequence, task} from './tools/utils';
 
-// (override)
-gulp.task('clean',       task('clean', 'all'));
-gulp.task('clean.dist',  task('clean', 'dist'));
+gulp.task('build.dev', done => runSequence(
+    'clean',
+    'tslint',
+    'build.config',
+    'build.less.dev',
+    'build.index',
+    done
+));
 
-gulp.task('build.dev', done =>
-    runSequence('clean.dist',
-        'tslint',
-        'build.config',
-        'build.less.dev',
-        'build.index',
-        done));
+gulp.task('serve', done => runSequence('serve', done));
 
-gulp.task('build.dev.watch', done =>
-    runSequence('build.dev',
-        'watch.dev',
-        done));
+gulp.task('build.dev.watch', done => runSequence(
+    'build.dev',
+    'watch.dev',
+    done
+));
 
-gulp.task('postinstall', done =>
-    runSequence(
-        'clean',
-        'npm.prune',
-        done));
+gulp.task('postinstall', done => runSequence(
+    'clean',
+    'npm.prune',
+    done
+));
