@@ -63,9 +63,11 @@ app.controller('nexusCtrl', [
                                 }
                                 
                                 var currentActivityHash = result.data.Response.data.characters[0].characterBase.currentActivityHash;
+                                console.log('current: ' + currentActivityHash);
+                                console.log('previous: ' + previousActivityHash);
                                 
                                 if (previousActivityHash != currentActivityHash) {
-                                    previousActivityHash = currentActivityHash;
+                                    load();
                                 }
                             });;
                     }, 60000);
