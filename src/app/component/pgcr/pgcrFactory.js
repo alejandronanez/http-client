@@ -104,7 +104,7 @@ app.factory('pgcrFactory', [
                             if (match = response.data.period.match(/\d+-\d+-\d+/)) {
                                 day = match[0];
                             }
-
+                            
                             if (!day) {
                                 return;
                             }

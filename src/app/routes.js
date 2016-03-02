@@ -87,6 +87,11 @@ app.config([
                 controller: 'pgcrCtrl',
                 templateUrl: 'component/pgcr/pgcr.html'
             })
+            .state('app.nexus', {
+                url: '/nexus/{platform:[0-9]+}/{name}',
+                controller: 'nexusCtrl',
+                templateUrl: 'component/nexus/nexus.html'
+            })
             .state('app.profile', {
                 url: '/profile/{platform}/{name}/{mode}',
                 params: {

@@ -13,7 +13,7 @@ app.service('bungie', [
             var BASE_URL = '//proxy.guardian.gg/Platform/Destiny';
             var ENDPOINTS = {
                 statDefinitions: '/Stats/Definition/?lc={locale}',
-                account: '/{platform}/Account/{membershipId}/Summary/',
+                account: '/{platform}/Account/{membershipId}/Summary/?definitions={defs}',
                 inventory: '/{platform}/Account/{membershipId}/Character/{characterId}/Inventory/?definitions=true&lc={locale}',
                 activityHistory: '/Stats/ActivityHistory/{platform}/{membershipId}/{characterId}/?mode={mode}&definitions=true&count=25&page={page}&lc={locale}',
                 searchForPlayer: '/SearchDestinyPlayer/{platform}/{name}/',
@@ -52,10 +52,11 @@ app.service('bungie', [
                 });
             };
 
-            this.getAccount = function(platform, membershipId) {
+            this.getAccount = function(platform, membershipId, defs) {
                 return this.get(ENDPOINTS.account, {
                     platform: platform,
-                    membershipId: membershipId
+                    membershipId: membershipId,
+                    defs: defs ? 'true' : 'false'
                 });
             };
 

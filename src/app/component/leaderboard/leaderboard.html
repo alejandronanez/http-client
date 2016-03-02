@@ -71,7 +71,7 @@
             <th class="text-center hidden-xs" style="width:5%" translate>Games</th>
         </tr>
         <tr class="empty" ng-if="results.data.length == 0">
-            <td colspan="9" class="text-center">No guardians were found.</td>
+            <td colspan="10" class="text-center">No guardians were found.</td>
         </tr>
         <tr ng-class="{highlight: (row.name|lowercase) == highlight}" ng-repeat="row in results.data | orderBy:'rank' track by $index">
             <td class="text-center">{{ (page * pageCount) + $index + 1|number }}</td>

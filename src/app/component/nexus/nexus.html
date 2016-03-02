@@ -1,0 +1,21 @@
+<div ng-if="fireteam">
+    <div ng-if="character.characterBase.currentActivityHash">
+        {{ ::player.displayName }} is currently playing <i class="ggg {{ modeIcon }}"></i> {{ modeName }} on {{ characterDefs.activities[character.characterBase.currentActivityHash].activityName }}
+    </div>
+
+    <div ng-if="!character.characterBase.currentActivityHash">
+        {{ ::player.displayName }} is not currently in a game.
+    </div>
+    
+    <hr>
+    
+    <div fireteam-list="fireteam"></div>
+    
+    <hr>
+    
+    <div pgcr="lastActivity.activityDetails.instanceId"></div>
+    
+    <hr>
+    
+    <div activity-list="activities" ng-if="activities"></div>
+</div>

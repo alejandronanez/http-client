@@ -1,6 +1,6 @@
 var app = angular.module('app');
 
-app.directive('pgcr', [
+app.directive('pgcrEmbed', [
     '$compile',
     '$timeout',
     'consts',

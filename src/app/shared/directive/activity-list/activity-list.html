@@ -1,0 +1,36 @@
+<table class="table table-striped history noselect" ng-if="activityList && activityList.length > 0">
+    <tr>
+        <th style="width:15%">Played</th>
+        <th style="width:20%" class="hidden-xs" translate>Map</th>
+        <th style="width:8%" class="text-center" translate>Score</th>
+        <th style="width:5%" class="text-center" translate>K</th>
+        <th style="width:5%" class="text-center" translate>D</th>
+        <th style="width:5%" class="text-center hidden-xs" translate>A</th>
+        <th style="width:5%" class="text-center" translate>K/D</th>
+        <th style="width:10%" class="text-center" translate>Standing</th>
+        <th style="width:1%" class="text-center"></th>
+    </tr>
+    <tr ng-repeat="activity in activityList track by activity.activityDetails.instanceId">
+        <td class="clickable">{{ activity.period|ago }}</td>
+        <td class="clickable hidden-xs">
+            <i class="ggg {{modeIcons[activity.activityDetails.mode]}}"></i> {{ activity.definition.activityName }}
+        </td>
+        <td class="text-center clickable" ng-show="activity.activityDetails.mode == 29">{{ activity.values.raceCompletionMilliseconds.basic.displayValue }}</td>
+        <td class="text-center clickable" ng-show="activity.activityDetails.mode != 29">{{ activity.values.score.basic.displayValue }}</td>
+        <td class="text-center clickable">{{ activity.values.kills.basic.displayValue }}</td>
+        <td class="text-center clickable">{{ activity.values.deaths.basic.displayValue }}</td>
+        <td class="text-center clickable hidden-xs">{{ activity.values.assists.basic.displayValue }}</td>
+        <td class="text-center clickable" ng-class="activity.values.killsDeathsRatio.basic.value < 1 ? 'kd negative' : 'kd positive'">
+            {{ activity.values.killsDeathsRatio.basic.displayValue }}
+        </td>
+        <td class="text-center clickable" ng-class="activity.values.standing.basic.value == 0 || activity.values.standing.basic.displayValue == '1' ? 'standing positive' : 'standing negative'">
+            {{ activity.values.standing.basic.displayValue }}
+        </td>
+        <td class="text-center external clickable">
+            <i class="fa fa-plus-square-o" pgcr-embed instance-id="activity.activityDetails.instanceId" character-id="character.characterBase.characterId"></i>
+        </td>
+    </tr>
+    <tr ng-if="activities.length == 0">
+        <td colspan="9" class="empty" translate>No games have been played in this mode.</td>
+    </tr>
+</table>

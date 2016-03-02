@@ -4,11 +4,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: component\item\itemDetailCtrl.js:109
-#: shared\chart\item-popularity.js:81
-msgid "% of All Kills"
-msgstr ""
-
 #: component\notice\templates\changelog.html:3
 msgid "'Crimson Days' Patch Changelog"
 msgstr ""
@@ -18,21 +13,39 @@ msgstr ""
 msgid "'Nade"
 msgstr ""
 
-#: component\layout\main.html:47
-msgid "<em>Internal error code: {{apiError}}</em>"
+#: component\item\itemDetailCtrl.js:128
+#: component\item\itemListFactory.js:599
+msgid "[Unnamed Item]"
+msgstr ""
+
+#: component\subclass\subclass.html:56
+msgid "{{subclass.label}} Overview"
+msgstr ""
+
+#: component\subclass\subclass.html:71
+msgid "{{subclass.label}} Perks &amp; Exotics"
+msgstr ""
+
+#: component\item\itemDetailCtrl.js:109
+#: shared\chart\item-popularity.js:81
+msgid "% of All Kills"
 msgstr ""
 
 #: component\home\home.html:7
 msgid "<em>{{totalPlayers24|number}}</em> tracked in the past day"
 msgstr ""
 
-#: component\pgcr\pgcr.html:5
+#: component\layout\main.html:47
+msgid "<em>Internal error code: {{apiError}}</em>"
+msgstr ""
+
+#: shared\directive\pgcr\pgcr.html:1
 msgid "<i class=\"fa fa-spin fa-refresh\"></i> Loading post game carnage report..."
 msgstr ""
 
 #. Short for assists
 #: component\leaderboard\leaderboard.html:68
-#: component\profile\activity-history.html:114
+#: shared\directive\activity-list\activity-list.html:8
 msgid "A"
 msgstr ""
 
@@ -101,7 +114,7 @@ msgstr ""
 msgid "Auto Rifle"
 msgstr ""
 
-#: component\pgcr\pgcr.html:31
+#: shared\directive\pgcr\pgcr.html:27
 msgid "Average Elo / Odds of winning:"
 msgstr ""
 
@@ -256,12 +269,8 @@ msgstr ""
 
 #. Short for deaths
 #: component\leaderboard\leaderboard.html:67
-#: component\profile\activity-history.html:113
+#: shared\directive\activity-list\activity-list.html:7
 msgid "D"
-msgstr ""
-
-#: component\layout\nav.html:181
-msgid "DPS Gear"
 msgstr ""
 
 #: component\weapon-stats\weapon-stats.html:96
@@ -317,6 +326,10 @@ msgstr ""
 msgid "Doubles"
 msgstr ""
 
+#: component\layout\nav.html:181
+msgid "DPS Gear"
+msgstr ""
+
 #: component\faq\faq.html:69
 msgid ""
 "Each mode you play has its own Elo rating and league categorization. Beyond that, Elo is account-wide, so in\r\n"
@@ -332,7 +345,7 @@ msgstr ""
 msgid "Elimination"
 msgstr ""
 
-#: component\pgcr\pgcr.html:67
+#: shared\directive\pgcr\pgcr.html:63
 msgid "Elo"
 msgstr ""
 
@@ -600,26 +613,26 @@ msgstr ""
 
 #. Short for kills
 #: component\leaderboard\leaderboard.html:66
-#: component\profile\activity-history.html:112
+#: shared\directive\activity-list\activity-list.html:6
 msgid "K"
-msgstr ""
-
-#. Short for kills / deaths
-#: component\leaderboard\leaderboard.html:69
-#: component\profile\activity-history.html:115
-#: component\subclass\subclass.html:118
-#: component\subclass\subclass.html:144
-#: component\subclass\subclass.html:174
-msgid "K/D"
-msgstr ""
-
-#: shared\chart\subclass-kd.js:18
-msgid "K/D by Mode"
 msgstr ""
 
 #: shared\chart\kd.js:32
 #: shared\chart\subclass-kd.js:34
 msgid "K:D"
+msgstr ""
+
+#. Short for kills / deaths
+#: component\leaderboard\leaderboard.html:69
+#: component\subclass\subclass.html:118
+#: component\subclass\subclass.html:144
+#: component\subclass\subclass.html:174
+#: shared\directive\activity-list\activity-list.html:9
+msgid "K/D"
+msgstr ""
+
+#: shared\chart\subclass-kd.js:18
+msgid "K/D by Mode"
 msgstr ""
 
 #: shared\chart\kd.js:18
@@ -666,8 +679,16 @@ msgstr ""
 msgid "Loading Armor..."
 msgstr ""
 
+#: component\changelog\changelog.html:35
+msgid "Loading changelog, please wait..."
+msgstr ""
+
 #: component\profile\character.html:2
 msgid "Loading Characters..."
+msgstr ""
+
+#: component\item\item-detail.html:230
+msgid "Loading chart..."
 msgstr ""
 
 #: component\subclass\subclass.html:59
@@ -678,12 +699,20 @@ msgstr ""
 msgid "Loading Elo Data..."
 msgstr ""
 
+#: component\item\item-list.html:15
+msgid "Loading filters..."
+msgstr ""
+
 #: component\profile\activity-history.html:85
 msgid "Loading Fireteam..."
 msgstr ""
 
-#: component\profile\activity-history.html:104
+#: component\profile\activity-history.html:94
 msgid "Loading Game History..."
+msgstr ""
+
+#: component\item\item-list.html:115
+msgid "Loading items, please wait..."
 msgstr ""
 
 #: component\profile\character.html:69
@@ -696,22 +725,6 @@ msgstr ""
 
 #: component\subclass\subclass.html:139
 msgid "Loading Weapons..."
-msgstr ""
-
-#: component\changelog\changelog.html:35
-msgid "Loading changelog, please wait..."
-msgstr ""
-
-#: component\item\item-detail.html:230
-msgid "Loading chart..."
-msgstr ""
-
-#: component\item\item-list.html:15
-msgid "Loading filters..."
-msgstr ""
-
-#: component\item\item-list.html:115
-msgid "Loading items, please wait..."
 msgstr ""
 
 #: component\changelog\changelogCtrl.js:34
@@ -730,7 +743,7 @@ msgstr ""
 msgid "Maintenance Notice"
 msgstr ""
 
-#: component\profile\activity-history.html:110
+#: shared\directive\activity-list\activity-list.html:4
 msgid "Map"
 msgstr ""
 
@@ -803,7 +816,7 @@ msgstr ""
 msgid "No Elo data exists for this player. This is either an error in our system, or the player pretty much never enters Crucible."
 msgstr ""
 
-#: component\profile\activity-history.html:140
+#: shared\directive\activity-list\activity-list.html:34
 msgid "No games have been played in this mode."
 msgstr ""
 
@@ -811,11 +824,11 @@ msgstr ""
 msgid "No items were found"
 msgstr ""
 
-#: component\pgcr\pgcr.html:175
+#: shared\directive\pgcr\pgcr.html:171
 msgid "No kills recorded"
 msgstr ""
 
-#: component\pgcr\pgcr.html:194
+#: shared\directive\pgcr\pgcr.html:190
 msgid "No medals earned"
 msgstr ""
 
@@ -825,6 +838,10 @@ msgstr ""
 
 #: shared\service\consts.js:763
 msgid "Ocean of Storms"
+msgstr ""
+
+#: shared\chart\weapon-bar.js:46
+msgid "of total kills"
 msgstr ""
 
 #: shared\service\consts.js:767
@@ -875,7 +892,7 @@ msgstr ""
 msgid "Perk"
 msgstr ""
 
-#: component\pgcr\pgcr.html:215
+#: shared\directive\pgcr\pgcr.html:211
 msgid "Permalink of this game"
 msgstr ""
 
@@ -893,17 +910,21 @@ msgstr ""
 msgid "Platinum"
 msgstr ""
 
-#: component\layout\nav.html:167
-#: component\layout\nav.html:24
-#: shared\service\consts.js:122
-msgid "PlayStation"
+#: shared\directive\pgcr\pgcr.html:8
+msgid "played"
 msgstr ""
 
 #: shared\service\consts.js:162
 msgid "Players"
 msgstr ""
 
-#: component\pgcr\pgcr.html:190
+#: component\layout\nav.html:167
+#: component\layout\nav.html:24
+#: shared\service\consts.js:122
+msgid "PlayStation"
+msgstr ""
+
+#: shared\directive\pgcr\pgcr.html:186
 msgid "Points"
 msgstr ""
 
@@ -928,12 +949,12 @@ msgstr ""
 msgid "Primary Stats"
 msgstr ""
 
-#: shared\service\consts.js:291
-msgid "Primary Weapon"
-msgstr ""
-
 #: component\item\item-list.html:31
 msgid "Primary type"
+msgstr ""
+
+#: shared\service\consts.js:291
+msgid "Primary Weapon"
 msgstr ""
 
 #: shared\service\consts.js:697
@@ -997,7 +1018,7 @@ msgstr ""
 msgid "Real-time stats for <em>{{totalPlayers|number}}</em> Destiny players"
 msgstr ""
 
-#: component\profile\activity-history.html:88
+#: shared\directive\fireteam-list\fireteam-list.html:2
 msgid "Recent Fireteam"
 msgstr ""
 
@@ -1043,20 +1064,6 @@ msgstr ""
 msgid "Rumble"
 msgstr ""
 
-#: component\profile\activity-history.html:77
-#: shared\service\consts.js:136
-msgid "SRL"
-msgstr ""
-
-#: component\layout\nav.html:152
-#: component\layout\nav.html:82
-msgid "SRL <span class=\"expired\">(Inactive)</span>"
-msgstr ""
-
-#: shared\service\consts.js:717
-msgid "SRL Record Book"
-msgstr ""
-
 #: component\item\item-detail.html:224
 #: component\layout\nav.html:137
 #: component\layout\nav.html:67
@@ -1065,7 +1072,7 @@ msgstr ""
 msgid "Salvage"
 msgstr ""
 
-#: component\profile\activity-history.html:111
+#: shared\directive\activity-list\activity-list.html:5
 msgid "Score"
 msgstr ""
 
@@ -1116,6 +1123,10 @@ msgstr ""
 #: shared\chart\profile-elo.js:140
 #: shared\service\consts.js:76
 msgid "Silver"
+msgstr ""
+
+#: component\profile\activity-history.html:31
+msgid "since \"The Taken King\" launch (Sept. 15, 2015)"
 msgstr ""
 
 #: component\faq\faq.html:34
@@ -1170,7 +1181,21 @@ msgstr ""
 msgid "Special Weapon"
 msgstr ""
 
-#: component\profile\activity-history.html:116
+#: component\profile\activity-history.html:77
+#: shared\service\consts.js:136
+msgid "SRL"
+msgstr ""
+
+#: component\layout\nav.html:152
+#: component\layout\nav.html:82
+msgid "SRL <span class=\"expired\">(Inactive)</span>"
+msgstr ""
+
+#: shared\service\consts.js:717
+msgid "SRL Record Book"
+msgstr ""
+
+#: shared\directive\activity-list\activity-list.html:10
 msgid "Standing"
 msgstr ""
 
@@ -1252,6 +1277,10 @@ msgstr ""
 msgid "Talent Grid"
 msgstr ""
 
+#: component\changelog\changelog.html:39
+msgid "The changelog you're looking for does not exist"
+msgstr ""
+
 #: component\faq\faq.html:46
 msgid ""
 "The Elo rating system is a method for calculating the relative skill levels of players in\r\n"
@@ -1262,24 +1291,20 @@ msgstr ""
 msgid "The February update has arrived, and with it we've compiled a list of all changes in the item database."
 msgstr ""
 
+#: component\profile\activity-history.html:91
+msgid "The match history is unavailable due to an API error"
+msgstr ""
+
+#: component\item\item-list.html:11
+msgid "The page URL gets updated with any filters you add. Share it, or come back to it later easily!"
+msgstr ""
+
 #: shared\service\consts.js:841
 msgid "The Speaker"
 msgstr ""
 
 #: shared\service\consts.js:742
 msgid "The Taken King"
-msgstr ""
-
-#: component\changelog\changelog.html:39
-msgid "The changelog you're looking for does not exist"
-msgstr ""
-
-#: component\profile\activity-history.html:101
-msgid "The match history is unavailable due to an API error"
-msgstr ""
-
-#: component\item\item-list.html:11
-msgid "The page URL gets updated with any filters you add. Share it, or come back to it later easily!"
 msgstr ""
 
 #: component\weapon-stats\weapon-stats.html:92
@@ -1334,12 +1359,12 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: component\weapon-stats\weapon-stats.html:87
-msgid "Top Weapons"
-msgstr ""
-
 #: component\home\home.html:15
 msgid "Top {{platforms[platform]}} Guardians"
+msgstr ""
+
+#: component\weapon-stats\weapon-stats.html:87
+msgid "Top Weapons"
 msgstr ""
 
 #: shared\service\consts.js:793
@@ -1399,13 +1424,17 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: component\pgcr\pgcr.html:212
+#: shared\directive\pgcr\pgcr.html:208
 msgid "View carnage report on Bungie.net"
 msgstr ""
 
 #: component\layout\nav.html:240
 #: shared\service\consts.js:206
 msgid "Voidwalker"
+msgstr ""
+
+#: shared\directive\pgcr\pgcr.html:16
+msgid "vs."
 msgstr ""
 
 #: component\item\item-detail.html:119
@@ -1486,33 +1515,4 @@ msgstr ""
 #: component\profile\activity-history.html:76
 #: shared\service\consts.js:133
 msgid "Zone Control"
-msgstr ""
-
-#: component\item\itemDetailCtrl.js:128
-#: component\item\itemListFactory.js:599
-msgid "[Unnamed Item]"
-msgstr ""
-
-#: shared\chart\weapon-bar.js:46
-msgid "of total kills"
-msgstr ""
-
-#: component\pgcr\pgcr.html:12
-msgid "played"
-msgstr ""
-
-#: component\profile\activity-history.html:31
-msgid "since \"The Taken King\" launch (Sept. 15, 2015)"
-msgstr ""
-
-#: component\pgcr\pgcr.html:20
-msgid "vs."
-msgstr ""
-
-#: component\subclass\subclass.html:56
-msgid "{{subclass.label}} Overview"
-msgstr ""
-
-#: component\subclass\subclass.html:71
-msgid "{{subclass.label}} Perks &amp; Exotics"
 msgstr ""

@@ -47,11 +47,12 @@ app
         '$state',
         '$log',
         '$location',
+        '$interval',
         'consts',
         'gettextCatalog',
         'util',
 
-        function($localStorage, $rootScope, $state, $log, $location, consts, gettextCatalog, util) {
+        function($localStorage, $rootScope, $state, $log, $location, $interval, consts, gettextCatalog, util) {
             var locale = $localStorage.locale ? $localStorage.locale : 'en';
             var regex = new RegExp("^\/(" + Object.keys(consts.languages).join('|') + ")\/");
             var match = $location.path().match(regex);
@@ -64,7 +65,15 @@ app
                 locale = match[1];
             }
 
-            window["gggTips"].locale(locale);
+            var ttipInterval = $interval(function() {
+                if (!window["gggTips"]) {
+                    return;
+                }
+                
+                window["gggTips"].locale(locale);
+                $interval.cancel(ttipInterval);
+            }, 50);
+
             gettextCatalog.setCurrentLanguage(locale);
             moment.locale(locale);
 

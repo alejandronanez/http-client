@@ -1,0 +1,14 @@
+<div class="fireteam row" ng-if="fireteamList.length > 0">
+    <h4 translate>Recent Fireteam</h4>
+    <div class="col-sm-2 member" ng-repeat="row in fireteamList" ng-show="row.name != name">
+        <div class="details">
+            <a ui-sref="app.profile({name: row.name, platform: row.membershipType})" class="name">
+                {{ row.name }}
+            </a>
+            <span class="clan" ng-show="row.clanTag">[{{ row.clanTag }}]</span>
+            <span class="clan none" ng-show="!row.clanTag">[No Clan]</span>
+            <span>{{ row.elo|number:0 }}</span>
+            <span>{{ (row.kills / row.deaths)|number: 2}}</span>
+        </div>
+    </div>
+</div>
